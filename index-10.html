@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تقرير عن لغة CSS - Nada Mohamed Gaber</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Tahoma, Arial, sans-serif; line-height: 1.9; color: #243047; background: #f3f6fc; }
+    header { text-align: center; color: white; padding: 42px 18px; background: linear-gradient(135deg,#172554,#2563eb); }
+    header h1 { margin: 0 0 8px; font-size: clamp(28px,5vw,42px); }
+    header p { margin: 3px; }
+    nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; padding: 13px; background: white; box-shadow: 0 3px 12px #17255414; }
+    nav a { color: #1d4ed8; text-decoration: none; padding: 5px 11px; border-radius: 20px; }
+    nav a:hover { background: #eaf1ff; }
+    main { width: min(1000px,92%); margin: 28px auto; }
+    section { background: white; padding: 24px clamp(16px,4vw,32px); margin-bottom: 20px; border-radius: 15px; box-shadow: 0 5px 20px #1725540c; scroll-margin-top: 18px; }
+    h2 { color: #1d4ed8; margin-top: 0; }
+    h3 { color: #1e3a8a; }
+    figure { margin: 18px auto; max-width: 760px; }
+    figure img { width: 100%; height: auto; display: block; border-radius: 13px; }
+    figcaption { text-align: center; color: #64748b; font-size: .9rem; }
+    table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+    th, td { border: 1px solid #d7e0ef; padding: 10px; text-align: right; }
+    th { color: white; background: #1e40af; }
+    tr:nth-child(even) { background: #f3f6fc; }
+    .code { direction: ltr; text-align: left; background: #172033; color: #dbeafe; padding: 14px; border-radius: 9px; overflow-x: auto; }
+    a { color: #1d4ed8; }
+    footer { text-align: center; color: #dbeafe; background: #172554; padding: 22px; }
+    @media(max-width:600px) { nav a { font-size: 13px; padding: 4px 7px; } section { padding: 18px 14px; } th,td { padding: 7px; font-size: 14px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>تقرير عن لغة CSS</h1>
+    <p>دورها في تصميم وتنسيق صفحات الويب</p>
+    <p><strong>اسم الطالبة:</strong> Nada Mohamed Gaber</p>
+    <p><strong>الرقم الجامعي:</strong> 2500468</p>
+  </header>
+
+  <nav aria-label="روابط أقسام الصفحة">
+    <a href="#intro">المقدمة</a>
+    <a href="#definition">تعريف CSS</a>
+    <a href="#methods">طرق الربط</a>
+    <a href="#basics">أساسيات التنسيق</a>
+    <a href="#modern">التقنيات الحديثة</a>
+    <a href="#ux">تجربة المستخدم</a>
+    <a href="#references">المراجع</a>
+  </nav>
+
+  <main>
+    <section id="intro">
+      <h2>المقدمة وأهمية البحث</h2>
+      <p>تُعتبر شبكة الإنترنت اليوم الوسيلة الأولى لنشر المعلومات والخدمات عبر العالم. ولتقديم تجربة تصفح ممتازة للمستخدمين، تتضافر عدة تقنيات لبناء صفحات الويب.</p>
+      <p>تُمثّل لغة <strong>HTML</strong> الهيكل والعناصر البنائية للصفحة، بينما تُشكّل لغة <strong>CSS</strong> (Cascading Style Sheets) المظهر الخارجي والجماليات والهوية البصرية الكاملة.</p>
+      <p>يهدف هذا التقرير إلى إبراز الدور الجوهري للغة CSS في تحويل المستندات النصية إلى مواقع إلكترونية أنيقة، وشرح كيفية إدارة الخطوط والألوان وتنظيم تخطيطات الصفحات لتلائم الشاشات والأجهزة الحديثة.</p>
+      <figure>
+        <img src="css-illustration.svg" alt="رسم توضيحي يشرح استخدام لغة CSS في تنسيق صفحة ويب">
+        <figcaption>شكل توضيحي لدور CSS في تنسيق صفحات الويب</figcaption>
+      </figure>
+    </section>
+
+    <section id="definition">
+      <h2>ماهية لغة CSS ونشأتها وتطورها</h2>
+      <p>CSS هي اختصار لـ <strong>Cascading Style Sheets</strong>، وتُترجم إلى «أوراق الأنماط المتتالية». ظهرت الأفكار الأولى للغة في منتصف التسعينات، واقتُرحت عام 1994 بواسطة المطور هاكون ويوم لي (Håkon Wium Lie) بالتعاون مع منظمة الويب العالمية (W3C)، لمعالجة مشكلة تداخل شفرات التنسيق مع هيكل HTML.</p>
+      <h3>مراحل تطور CSS</h3>
+      <table>
+        <tr><th>الإصدار</th><th>أبرز الخصائص</th></tr>
+        <tr><td>CSS1</td><td>تغيير الألوان والخطوط ومحاذاة النصوص.</td></tr>
+        <tr><td>CSS2</td><td>تحديد المواقع المتقدمة ودعم وسائط مختلفة مثل الطباعة.</td></tr>
+        <tr><td>CSS3</td><td>الظلال والزوايا المنحنية والرسوم المتحركة والتصميم المتجاوب.</td></tr>
+      </table>
+      <h3>كيف تعمل CSS؟</h3>
+      <p>تعتمد CSS على قاعدة تنسيق (Rule Set) تتكون من محدد (Selector) يختار عنصر HTML، وكتلة إعلانات تحتوي على الخاصية (Property) والقيمة (Value).</p>
+      <pre class="code">p {
+  color: blue;
+  font-size: 18px;
+}</pre>
+    </section>
+
+    <section id="methods">
+      <h2>طرق ربط CSS بصفحات HTML</h2>
+      <ol>
+        <li><strong>التنسيق السطري (Inline CSS):</strong> كتابة التنسيق داخل عنصر HTML مباشرة باستخدام الخاصية style، ولا يُفضل للمشروعات الكبيرة.</li>
+        <li><strong>التنسيق الداخلي (Internal CSS):</strong> كتابة التنسيقات داخل وسم style في رأس صفحة HTML.</li>
+        <li><strong>التنسيق الخارجي (External CSS):</strong> كتابة الأنماط في ملف منفصل امتداده .css وربطه باستخدام وسم link، وهي الطريقة الأكثر كفاءة لإعادة استخدام التنسيقات في صفحات متعددة.</li>
+      </ol>
+    </section>
+
+    <section id="basics">
+      <h2>العناصر الأساسية للتنسيق بـ CSS</h2>
+      <h3>التحكم بالألوان (Color Management)</h3>
+      <p>تتيح CSS تحديد الألوان بأسماء مثل red وblue، أو بنظام HEX مثل <strong>#FF5733</strong>، أو بنظام RGB وRGBA الذي يحدد نسب الأحمر والأخضر والأزرق مع إمكانية التحكم في الشفافية.</p>
+      <h3>الخطوط والنصوص (Typography)</h3>
+      <p>تسمح خصائص مثل font-family باختيار نوع الخط، وfont-size بتحديد حجمه، بينما تتحكم line-height وletter-spacing في المسافات بين الأسطر والأحرف لتحسين القراءة.</p>
+      <h3>نموذج الصندوق (The Box Model)</h3>
+      <p>يُتعامل مع كل عنصر HTML على أنه صندوق مستطيل يتكون من أربعة أجزاء:</p>
+      <ul>
+        <li><strong>Content:</strong> المحتوى، مثل النص أو الصورة.</li>
+        <li><strong>Padding:</strong> المساحة الداخلية حول المحتوى.</li>
+        <li><strong>Border:</strong> الإطار المحيط بالحشوة والمحتوى.</li>
+        <li><strong>Margin:</strong> المساحة الخارجية بين العنصر والعناصر المجاورة.</li>
+      </ul>
+    </section>
+
+    <section id="modern">
+      <h2>التقنيات الحديثة: التصميم المتجاوب وتخطيطات الصندوق والمرونة</h2>
+      <h3>التصميم المتجاوب (Responsive Web Design)</h3>
+      <p>تتيح تقنية Media Queries تطبيق تنسيقات مختلفة بناءً على عرض شاشة الجهاز، لتناسب الهواتف والأجهزة اللوحية والحواسيب.</p>
+      <h3>نظام Flexbox</h3>
+      <p>نظام تخطيط أحادي البعد، إما صف أو عمود، يُسهّل توزيع المساحات بين العناصر ومحاذاتها بمرونة.</p>
+      <h3>نظام CSS Grid</h3>
+      <p>نظام تخطيط ثنائي الأبعاد يجمع بين الصفوف والأعمدة، ويساعد على بناء هياكل منظمة للمواقع والمنصات التعليمية والإخبارية.</p>
+    </section>
+
+    <section id="ux">
+      <h2>تأثير CSS على تجربة المستخدم (UX) وأداء المواقع</h2>
+      <ul>
+        <li><strong>سرعة التحميل:</strong> يمكن للملفات الخارجية المخزنة مؤقتًا في المتصفح أن تقلل استهلاك البيانات وتساعد على سرعة التصفح.</li>
+        <li><strong>سهولة الوصول (Accessibility):</strong> مراعاة تباين الألوان وأحجام الخطوط تجعل الموقع أسهل استخدامًا.</li>
+        <li><strong>التفاعلية البصرية:</strong> تأثيرات التمرير مثل :hover والانتقالات مثل transition تمنح المستخدم استجابة بصرية عند التفاعل مع الصفحة.</li>
+      </ul>
+    </section>
+
+    <section id="conclusion">
+      <h2>الخاتمة والتوصيات</h2>
+      <p>تُثبت لغة CSS أنها أكثر من مجرد أداة للتلوين؛ فهي تمنح مواقع الويب شخصيتها وجاذبيتها. ويساهم استخدامها بشكل منظم في كتابة كود نظيف وسهل التحكم والصيانة.</p>
+      <h3>التوصيات</h3>
+      <ul>
+        <li>الاعتماد على الملفات الخارجية لـ CSS لتسهيل التطوير والصيانة.</li>
+        <li>مراعاة قواعد التصميم المتجاوب عبر مختلف الأجهزة.</li>
+        <li>التعمق في تقنيات CSS الحديثة مثل Flexbox وCSS Variables.</li>
+      </ul>
+    </section>
+
+    <section id="references">
+      <h2>المراجع والمصادر</h2>
+      <ul>
+        <li><a href="https://www.w3schools.com/css/" target="_blank" rel="noopener noreferrer">W3Schools - CSS Tutorial</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content" target="_blank" rel="noopener noreferrer">MDN Web Docs - Styling the content with CSS</a></li>
+        <li>Duckett, J. (2011). <em>HTML and CSS: Design and Build Websites.</em> John Wiley &amp; Sons.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>تقرير عن لغة CSS</p>
+    <p>Nada Mohamed Gaber - 2500468</p>
+  </footer>
+</body>
+</html>
